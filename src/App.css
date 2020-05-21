@@ -1,38 +1,57 @@
-.App {
+body{
+  background: #000;
+}
+
+.App{
+  height: 100vh;
+  color: #efa;
+  display: flex;
+  flex-direction: column;
+  font-size: 10vmin;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+
+.title{
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.15em;
+}
+
+.verse{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.picture{
+  height: 17vh;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pictureRow{
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes opening {
+  from{ width: 80vw; }
+  to{ width: 0vw; }
 }
 
-.App-link {
-  color: #61dafb;
+.curtain{
+  background: #000;
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  animation-name: opening;
+  animation-duration: 4s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.curtainLeft{
+  left: 0px;
+}
+
+.curtainRight{
+  right: 0px;
 }
